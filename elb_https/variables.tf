@@ -32,6 +32,16 @@ variable "subnet_az3" {
   description = "The subnet for AZ3"
 }
 
+variable "listener_port" {
+  description = "The port to listen on"
+  default = "443"
+}
+
+variable "listener_protocol" {
+  description = "The protocol to use"
+  default = "https"
+}
+
 variable "backend_port" {
   description = "The port the service on the EC2 instances listens on"
 }
