@@ -23,7 +23,7 @@ resource "aws_elb" "elb" {
   listener {
     instance_port = "${var.backend_port}"
     instance_protocol = "${var.backend_protocol}"
-    lb_port = ${var.listener_port}
+    lb_port = "${var.listener_port}"
     lb_protocol = "${var.listener_protocol}"
     ssl_certificate_id = "${var.ssl_certificate_id}"
   }
