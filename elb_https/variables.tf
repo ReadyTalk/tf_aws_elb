@@ -28,6 +28,10 @@ variable "subnet_az2" {
   description = "The subnet for AZ2"
 }
 
+variable "subnet_az3" {
+  description = "The subnet for AZ3"
+}
+
 variable "backend_port" {
   description = "The port the service on the EC2 instances listens on"
 }
