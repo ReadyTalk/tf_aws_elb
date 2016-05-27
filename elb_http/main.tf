@@ -16,15 +16,15 @@ provider "aws" {
 //   the ELB.
 resource "aws_elb" "elb" {
   name = "${var.elb_name}"
-  subnets = ["${var.subnet_az1}","${var.subnet_az2}"]
+  subnets = ["${var.subnet_az1}","${var.subnet_az2}","${var.subnet_az3}"]
   internal = "${var.elb_is_internal}"
   security_groups = ["${var.elb_security_group}"]
 
   listener {
     instance_port = "${var.backend_port}"
     instance_protocol = "${var.backend_protocol}"
-    lb_port = 80
-    lb_protocol = "http"
+    lb_port = "${var.listener_port}"
+    lb_protocol = "${var.listener_protocol}"
   }
 
   health_check {

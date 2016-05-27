@@ -22,6 +22,20 @@ variable "subnet_az2" {
   description = "The subnet for AZ2"
 }
 
+variable "subnet_az3" {
+  description = "The subnet for AZ3"
+}
+
+variable "listener_port" {
+  description = "The port to listen on"
+  default = "80"
+}
+
+variable "listener_protocol" {
+  description = "The protocol to use"
+  default = "http"
+}
+
 variable "backend_port" {
   description = "The port the service on the EC2 instances listens on"
 }
